@@ -1,0 +1,8 @@
+# provided by ieee-data
+usr/share/hwdata/iab.txt
+# provided by ieee-data
+usr/share/hwdata/oui.txt
+# provided by pci.ids
+usr/share/hwdata/pci.ids
+# provided by usb.ids
+usr/share/hwdata/usb.ids
