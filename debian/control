@@ -1,0 +1,39 @@
+Source: hwdata
+Section: misc
+Priority: optional
+Standards-Version: 4.5.0
+Maintainer: Wong Hoi Sing Edison <hswong3i@pantarei-design.com>
+Homepage: https://github.com/vcrhonek/hwdata/tags
+Vcs-Browser: https://github.com/alvistack/vcrhonek-hwdata
+Vcs-Git: https://github.com/alvistack/vcrhonek-hwdata.git
+Build-Depends:
+ debhelper,
+ debhelper-compat (= 10),
+
+Package: hwdata
+Architecture: amd64
+Description: hardware identification / configuration data
+ This package contains various hardware identification and configuration data,
+ such as the pci.ids, pnp.ids, and usb.ids databases.
+ .
+ Some of the shipped databases can be installed on their own; see the specific
+ packages "pci.ids", "pnp.ids", and "usb.ids".
+Depends:
+ ${misc:Depends},
+ pci.ids,
+ pnp.ids (= ${source:Version}),
+ usb.ids,
+
+Package: pnp.ids
+Architecture: amd64
+Description: PNP ID Registry
+ This package contains the pnp.ids file, a public registry of all known
+ Vendor ID's used in PnP devices: ID's of vendors and names of vendors.
+ It is used in various programs to display full human-readable names instead
+ of cryptic codes.
+Depends:
+ ${misc:Depends},
+Breaks:
+ hwdata (<< 0.393-2~),
+Replaces:
+ hwdata (<< 0.393-2~),
