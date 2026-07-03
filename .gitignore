@@ -1,4 +1,7 @@
 Makefile.inc
 hwdata.pc
+<<<<<<< HEAD
 pci.ids.old
 pnp.ids.csv
+=======
+>>>>>>> 56e84c0 (alvistack/0.406)
